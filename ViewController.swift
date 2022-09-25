@@ -1,4 +1,4 @@
-//  Authors: Himanshu (301296001) & Gurminder
+//  Authors: Himanshu (301296001) & Gurminder ()
 //  Group: 1
 //  Subject: MAPD714
 //  Assignment: 1
@@ -18,47 +18,59 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        resultLabel.text = "0"
     }
     
     /** Numeric Buttons Connection */
     
     @IBAction func sevenTap(_ sender: Any) {
+        resultLabel.text = "7"
     }
     
     @IBAction func eightTap(_ sender: Any) {
+        resultLabel.text = "8"
     }
 
     @IBAction func nineTap(_ sender: Any) {
+        resultLabel.text = "9"
     }
     
     @IBAction func fourTap(_ sender: Any) {
+        resultLabel.text = "4"
     }
     
     @IBAction func fiveTap(_ sender: Any) {
+        resultLabel.text = "5"
     }
     
     @IBAction func sixTap(_ sender: Any) {
+        resultLabel.text = "6"
     }
     
     @IBAction func oneTap(_ sender: Any) {
+        resultLabel.text = "1"
     }
     
     @IBAction func twoTap(_ sender: Any) {
+        resultLabel.text = "2"
     }
     
     @IBAction func threeTap(_ sender: Any) {
+        resultLabel.text = "3"
     }
     
     @IBAction func decimalTap(_ sender: Any) {
+        resultLabel.text = "."
     }
     
     @IBAction func zeroTap(_ sender: Any) {
+        resultLabel.text = "0"
     }
     
     /** Clear Button Connection */
     
     @IBAction func clearBtn(_ sender: Any) {
+        resultLabel.text = "0"
     }
     
     /** Backspace Button Connection */
