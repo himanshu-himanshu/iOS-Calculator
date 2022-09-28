@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides boldText="YES"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,27 +22,45 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-VT-kCH">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="70"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIY-8V-HcD">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIY-8V-HcD">
                                                 <rect key="frame" x="0.0" y="0.0" width="168" height="70"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Clear">
+                                                <buttonConfiguration key="configuration" style="filled">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.86666667460000002" green="0.37254902719999999" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Clear">
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <color key="baseForegroundColor" red="0.96862745289999996" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="clearBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJT-4M-2Xw"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw6-lB-Io2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw6-lB-Io2">
                                                 <rect key="frame" x="176" y="0.0" width="168" height="70"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Backspace">
+                                                <buttonConfiguration key="configuration" style="filled">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.96862745289999996" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Backspace">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="baseBackgroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="backspaceBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbt-PT-R5J"/>
@@ -62,14 +81,14 @@
                                                     <constraint firstAttribute="width" constant="80" id="HRJ-sk-sSW"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="+/-">
+                                                <buttonConfiguration key="configuration" style="filled" title="±">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <color key="baseForegroundColor" red="0.96862745289999996" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="plusMinusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hg3-Xb-3Qh"/>
+                                                    <action selector="plusMinusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggf-XY-rbH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76m-zO-cu1">
@@ -82,24 +101,34 @@
                                                     <color key="baseForegroundColor" red="0.96862745289999996" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="modulusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZp-7Q-u62"/>
+                                                    <action selector="modulusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dh9-f9-58f"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOz-Zx-4kG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOz-Zx-4kG">
                                                 <rect key="frame" x="176" y="0.0" width="168" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="168" id="FK3-rq-jVt"/>
                                                     <constraint firstAttribute="height" constant="70" id="qJk-HR-WQA"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="+">
+                                                <buttonConfiguration key="configuration" style="filled">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="＋">
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="20" name="PingFangSC-Semibold"/>
+                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <color key="baseForegroundColor" red="0.96862745289999996" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="addBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yi0-2y-sEq"/>
+                                                    <action selector="addBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaJ-BQ-OoK"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -122,7 +151,7 @@
                                                     <color key="baseBackgroundColor" red="0.96862745289999996" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="sevenTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PPj-DS-P6k"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ezl-D5-nv0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sf-j6-mB8">
@@ -135,7 +164,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="eightTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Cj-If-1kB"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HCy-Nh-g2d"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oI-SN-zSW">
@@ -145,10 +174,11 @@
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.96862745289999996" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nineTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRl-Do-D1L"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7X5-2I-ff3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBO-E4-Pqz">
@@ -183,7 +213,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="fourTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMW-So-UT6"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iyu-zQ-RnO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kJ-Jr-kni">
@@ -196,7 +226,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="fiveTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QsS-qA-PCz"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZd-2d-FW4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwc-jt-CbF">
@@ -209,7 +239,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="sixTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMS-Ve-gBG"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftA-nI-D9S"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uY-2j-FgM">
@@ -244,7 +274,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="oneTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUo-MM-4hv"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrX-es-cxO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiu-v9-jG2">
@@ -257,7 +287,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="twoTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EGm-ei-UyF"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Esr-O4-J8D"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qK4-gd-qvz">
@@ -270,7 +300,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="threeTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kYe-Ns-f2M"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMO-ur-NPg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoX-OK-rx5">
@@ -309,7 +339,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="decimalTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vkW-Lr-sa0"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tm5-ba-WM3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOU-SQ-Kum">
@@ -326,7 +356,7 @@
                                                     <color key="baseForegroundColor" red="0.11372549830000001" green="0.270588249" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="zeroTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bP5-ZQ-rkD"/>
+                                                    <action selector="numericButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RA2-wa-hDO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUb-nv-QV3">
@@ -361,12 +391,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4EF-G1-Wto" firstAttribute="leading" secondItem="fEg-y4-DCH" secondAttribute="leading" id="6NK-Py-Pze"/>
+                            <constraint firstItem="4EF-G1-Wto" firstAttribute="trailing" secondItem="fEg-y4-DCH" secondAttribute="trailing" id="5aa-8t-85P"/>
                             <constraint firstItem="fEg-y4-DCH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="EJ0-bh-JUm"/>
-                            <constraint firstItem="4EF-G1-Wto" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="EXv-MP-KON"/>
-                            <constraint firstItem="fEg-y4-DCH" firstAttribute="top" secondItem="4EF-G1-Wto" secondAttribute="bottom" constant="20" id="ic2-zY-Ph8"/>
+                            <constraint firstItem="4EF-G1-Wto" firstAttribute="leading" secondItem="fEg-y4-DCH" secondAttribute="leading" id="Kqv-UL-9JE"/>
+                            <constraint firstItem="fEg-y4-DCH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJT-L4-r38"/>
+                            <constraint firstItem="4EF-G1-Wto" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="gB9-sK-R8W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fEg-y4-DCH" secondAttribute="trailing" constant="23" id="q48-ec-xcM"/>
-                            <constraint firstItem="4EF-G1-Wto" firstAttribute="trailing" secondItem="fEg-y4-DCH" secondAttribute="trailing" id="ulk-oo-FeJ"/>
+                            <constraint firstItem="fEg-y4-DCH" firstAttribute="top" secondItem="4EF-G1-Wto" secondAttribute="bottom" constant="20" id="r9X-sf-ija"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fEg-y4-DCH" secondAttribute="bottom" constant="30" id="wTI-I1-u63"/>
                         </constraints>
                     </view>
